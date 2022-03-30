@@ -1,0 +1,58 @@
+<script>
+    const computerPlay = () => {
+        let random = Math.round(Math.random() * 3);
+        if (random === 1) {
+            console.log('computer chose rock');
+            return 'rock';
+        } else if (random === 2) {
+            console.log('computer chose paper');
+            return 'paper';
+        } else if (random === 3) {
+            console.log('computer chose scissors');
+            return 'scissors';
+        }
+    }
+    
+    const playerPlay = () => {
+        let userSelection = prompt('Choose between rock, paper and scissors:');
+        userSelection = userSelection.toLowerCase();
+        if (userSelection === 'rock') {
+            console.log(`user chose ${userSelection}`)
+            return userSelection;
+        } else if (userSelection === 'paper'){
+            console.log(`user chose ${userSelection}`)
+            return userSelection;
+        } else if (userSelection === 'scissors') {
+            console.log(`user chose ${userSelection}`)
+            return userSelection;
+        } else {
+            console.log('word entered not recognized, please try again');
+            playerPlay();
+        }
+    }
+
+    const playRound = (playerSelection, computerSelection) => {
+         if (playerSelection === 'rock' && computerSelection === 'rock') {
+            console.log("Draw! Player and computer both chose 'rock'!")
+         } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+            console.log("You lose! paper beats rock!")
+         } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+            console.log("You win! rock beats scissors!")
+         } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+            console.log("You win! paper beats rock!")
+         } else if (playerSelection === 'paper' && computerSelection === 'paper') {
+            console.log("Draw! Player and computer both chose 'paper'!")
+         } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+            console.log("You lose! scissors beats paper!")
+         } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+            console.log("You lose! rock beats scissors!")
+         } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+            console.log("You win! scissors beats paper!")
+         } else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
+            console.log("Draw! Player and computer both chose 'scissors'!")
+         }
+    }
+
+    
+    playRound(playerPlay(), computerPlay());
+</script>
