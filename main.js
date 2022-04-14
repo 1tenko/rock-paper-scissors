@@ -5,7 +5,7 @@ const score = document.querySelector('#score');
 
 let userScore = 0;
 let computerSore = 0;
-let round = 0;
+let round = 2;
 
 
 const SELECTIONS = [
@@ -52,6 +52,8 @@ function roundResult(selection, opponentSelection) {
     } else if (isWinner(opponentSelection, selection)) {
         computerSore++;
         result.textContent = `Computer wins! ${opponentSelection.name} beats ${selection.name}`;
+    } else {
+        result.textContent = 'Draw! play again!'
     }
     score.textContent = `Score: ${userScore} user, ${computerSore} cpu`;
     roundCount.textContent = `round ${round++}`;

@@ -30,6 +30,7 @@ body {
     align-items: center;
     gap: 20px;
     background-color: grey;
+    width: 60vh;
     padding: 20px;
 }
 
