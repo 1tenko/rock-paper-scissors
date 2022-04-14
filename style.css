@@ -47,3 +47,7 @@ button {
     padding-right: 80px;
     font-size: 30px;
 }
+
+#roundResult {
+    text-align: center;
+}

@@ -48,10 +48,10 @@ function isWinner(selection, opponentSelection) {
 function roundResult(selection, opponentSelection) {
     if (isWinner(selection, opponentSelection)) {
         userScore++;
-        result.textContent = `User wins! ${selection.name} beats ${opponentSelection.name}`;
+        result.textContent = `User wins! User chose ${selection.name} and Computer chose ${opponentSelection.name}.`;
     } else if (isWinner(opponentSelection, selection)) {
         computerSore++;
-        result.textContent = `Computer wins! ${opponentSelection.name} beats ${selection.name}`;
+        result.textContent = `Computer wins! Computer chose ${opponentSelection.name} and User chose ${selection.name}.`;
     } else {
         result.textContent = 'Draw! play again!'
     }
