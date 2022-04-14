@@ -1,0 +1,48 @@
+body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    color: white;
+    height: 100%;
+}
+
+#left, #right {
+    width: 20%;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-grow: 1;
+    font-size: 40px;
+}
+
+#header {
+    font-size: 80px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: grey;
+    padding: 20px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+button {
+    padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 30px;
+}
