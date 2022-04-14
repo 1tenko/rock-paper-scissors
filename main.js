@@ -35,3 +35,8 @@ function computerPlay() {
     const randomIndex = Math.floor(Math.random() * SELECTIONS.length);
     return SELECTIONS[randomIndex];
 }
+
+function makeSelection(selection) {
+    const computerSelection = computerPlay();
+    roundResult(selection, computerSelection);
+}
