@@ -40,3 +40,7 @@ function makeSelection(selection) {
     const computerSelection = computerPlay();
     roundResult(selection, computerSelection);
 }
+
+function isWinner(selection, opponentSelection) {
+    return selection.beats === opponentSelection.name;
+}
