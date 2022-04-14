@@ -44,3 +44,16 @@ function makeSelection(selection) {
 function isWinner(selection, opponentSelection) {
     return selection.beats === opponentSelection.name;
 }
+
+function roundResult(selection, opponentSelection) {
+    if (isWinner(selection, opponentSelection)) {
+        userScore++;
+        result.textContent = `User wins! ${selection.name} beats ${opponentSelection.name}`;
+    } else if (isWinner(opponentSelection, selection)) {
+        computerSore++;
+        result.textContent = `Computer wins! ${opponentSelection.name} beats ${selection.name}`;
+    }
+    score.textContent = `Score: ${userScore} user, ${computerSore} cpu`;
+    roundCount.textContent = `round ${round++}`;
+
+}
