@@ -23,6 +23,14 @@ const SELECTIONS = [
     }
 ];
 
+buttons.forEach(selectionButton => {
+    selectionButton.addEventListener('click', e => {
+        const userSelectionName = selectionButton.dataset.selection;
+        const selection = SELECTIONS.find(selection => selection.name === userSelectionName);
+        makeSelection(selection);
+    })
+});
+
 function computerPlay() {
     const randomIndex = Math.floor(Math.random() * SELECTIONS.length);
     return SELECTIONS[randomIndex];
